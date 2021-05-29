@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon ./bin/www",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -22,6 +22,6 @@
     "sequelize": "^6.3.5",
     "sequelize-cli": "^6.2.0",
     "socket.io": "^2.3.0",
-    "gh-pages": "3.2.0",
+    "gh-pages": "3.2.0"
   }
 }
