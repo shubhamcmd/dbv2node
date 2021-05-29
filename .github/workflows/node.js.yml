@@ -23,18 +23,19 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1
-  
+
     - name: Install dependencies
       run: npm install
 
-    - name: Run the tests
-      run: npm test
+    - name: Run the tests and generate coverage report
+      run: npm test -- --coverage
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1
 
     - name: Build
       run: npm run build
+
     - name: Deploy
       run: |
         git config --global user.name $user_name
